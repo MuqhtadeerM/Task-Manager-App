@@ -1,0 +1,256 @@
+/* -------------------------------------------------
+   Layout & container
+   ------------------------------------------------- */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f8faff, #e0e7ff);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------
+   Animated background orbs
+   ------------------------------------------------- */
+.bgOrbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  animation: pulse 6s infinite ease-in-out;
+}
+.orb1 {
+  width: 320px;
+  height: 320px;
+  background: #c4b5fd;
+  top: -160px;
+  right: -160px;
+}
+.orb2 {
+  width: 320px;
+  height: 320px;
+  background: #fca5a5;
+  bottom: -160px;
+  left: -160px;
+  animation-delay: 2s;
+}
+.orb3 {
+  width: 380px;
+  height: 380px;
+  background: #93c5fd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+/* -------------------------------------------------
+   Card
+   ------------------------------------------------- */
+.cardWrapper {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+}
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* -------------------------------------------------
+   Header
+   ------------------------------------------------- */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to bottom right, #3b82f6, #7c3aed);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.userIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: white;
+}
+.title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+.subtitle {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* -------------------------------------------------
+   Error
+   ------------------------------------------------- */
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  animation: fadeIn 0.4s ease-out;
+}
+.errorIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------------
+   Form
+   ------------------------------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.input {
+  padding: 0.875rem 1rem;
+  background: rgba(249, 250, 251, 0.7);
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* -------------------------------------------------
+   Button
+   ------------------------------------------------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  background: linear-gradient(to right, #3b82f6, #7c3aed);
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.btnDisabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 1s linear infinite;
+}
+.spinnerCircle {
+  opacity: 0.25;
+}
+.spinnerPath {
+  opacity: 0.75;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------------------------
+   Footer
+   ------------------------------------------------- */
+.footerText {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.loginLink {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+}
+.loginLink:hover {
+  color: #6d28d9;
+}
+.footerSmall {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
