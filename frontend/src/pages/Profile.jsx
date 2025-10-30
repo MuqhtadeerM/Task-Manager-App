@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
-import styles from "./Profile.module.css";
+import styles from "../styles/Profile.module.css";
 
 const Profile = () => {
   const { user, updateProfile } = useContext(AuthContext);
