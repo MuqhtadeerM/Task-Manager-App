@@ -298,9 +298,9 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-Your Name
-- GitHub: [@Muqtadeer](https://github.com/Muqhtadeer)
-- LinkedIn: [Your Name](https://linkedin.com/in/muqhtadeer-m/)
+Muhammed Muqhtadeer
+- GitHub: [@Muqtadeer](https://github.com/MuqhtadeerM)
+- LinkedIn: [Muhammed Muqhtadeer](https://linkedin.com/in/muqhtadeer-m/)
 
 ## 🙏 Acknowledgments
 
